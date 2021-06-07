@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/caarlos0/domain_exporter/internal/client"
 	"github.com/openrdap/rdap"
+	"github.com/pasientskyhosting/domain_exporter/internal/client"
 	"github.com/prometheus/common/log"
 )
 

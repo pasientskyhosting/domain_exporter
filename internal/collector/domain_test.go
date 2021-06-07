@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/caarlos0/domain_exporter/internal/client"
-	"github.com/caarlos0/domain_exporter/internal/rdap"
-	"github.com/caarlos0/domain_exporter/internal/whois"
+	"github.com/pasientskyhosting/domain_exporter/internal/client"
+	"github.com/pasientskyhosting/domain_exporter/internal/rdap"
+	"github.com/pasientskyhosting/domain_exporter/internal/whois"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/stretchr/testify/require"

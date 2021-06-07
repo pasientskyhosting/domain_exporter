@@ -11,7 +11,7 @@ Exports the expiration time of your domains as prometheus metrics.
 Or with docker:
 
 ```console
-docker run -p 9222:9222 caarlos0/domain_exporter
+docker run -p 9222:9222 pasientskyhosting/domain_exporter
 ```
 
 #### Environment variables
@@ -49,7 +49,7 @@ It works more or less like prometheus's
 [blackbox_exporter](https://github.com/prometheus/blackbox_exporter).
 
 Alerting rules examples can be found on the
-[_examples](https://github.com/caarlos0/domain_exporter/tree/master/_examples)
+[_examples](https://github.com/pasientskyhosting/domain_exporter/tree/master/_examples)
 folder.
 
 ## Building locally

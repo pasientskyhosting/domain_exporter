@@ -20,8 +20,8 @@ archives:
   - '*.md'
 dockers:
   - image_templates:
-      - 'caarlos0/domain_exporter:{{ .Tag }}-amd64'
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
     dockerfile: Dockerfile
     use_buildx: true
     build_flag_templates:
@@ -30,11 +30,11 @@ dockers:
       - "--label=org.opencontainers.image.name={{.ProjectName}}"
       - "--label=org.opencontainers.image.revision={{.FullCommit}}"
       - "--label=org.opencontainers.image.version={{.Version}}"
-      - "--label=org.opencontainers.image.source=https://github.com/caarlos0/domain_exporter"
+      - "--label=org.opencontainers.image.source=https://github.com/pasientskyhosting/domain_exporter"
       - "--platform=linux/amd64"
   - image_templates:
-      - 'caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
     dockerfile: Dockerfile
     use_buildx: true
     build_flag_templates:
@@ -43,33 +43,33 @@ dockers:
       - "--label=org.opencontainers.image.name={{.ProjectName}}"
       - "--label=org.opencontainers.image.revision={{.FullCommit}}"
       - "--label=org.opencontainers.image.version={{.Version}}"
-      - "--label=org.opencontainers.image.source=https://github.com/caarlos0/domain_exporter"
+      - "--label=org.opencontainers.image.source=https://github.com/pasientskyhosting/domain_exporter"
       - "--platform=linux/arm64/v8"
     goarch: arm64
 docker_manifests:
-  - name_template: 'caarlos0/domain_exporter:{{ .Tag }}'
+  - name_template: 'pasientskyhosting/domain_exporter:{{ .Tag }}'
     image_templates:
-      - 'caarlos0/domain_exporter:{{ .Tag }}-amd64'
-      - 'caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
-  - name_template: 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
+  - name_template: 'pasientskyhosting/domain_exporter:{{ .Tag }}'
     image_templates:
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-amd64'
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
-  - name_template: 'caarlos0/domain_exporter:latest'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
+  - name_template: 'pasientskyhosting/domain_exporter:latest'
     image_templates:
-      - 'caarlos0/domain_exporter:{{ .Tag }}-amd64'
-      - 'caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
-  - name_template: 'ghcr.io/caarlos0/domain_exporter:latest'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
+  - name_template: 'pasientskyhosting/domain_exporter:latest'
     image_templates:
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-amd64'
-      - 'ghcr.io/caarlos0/domain_exporter:{{ .Tag }}-arm64v8'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-amd64'
+      - 'pasientskyhosting/domain_exporter:{{ .Tag }}-arm64v8'
 nfpms:
   - file_name_template: '{{ .ProjectName }}_{{ .Arch }}'
-    homepage:  https://github.com/caarlos0/domain_exporter
+    homepage:  https://github.com/pasientskyhosting/domain_exporter
     description: Exports the expiration time of your domains as prometheus metrics.
-    maintainer: Carlos Alexandro Becker <root@carlosbecker.com>
+    maintainer: Chad Jones <cj@patientsky.com>
     license: MIT
-    vendor: Carlos Becker
+    vendor: Chad Jones
     formats:
       - apk
       - deb

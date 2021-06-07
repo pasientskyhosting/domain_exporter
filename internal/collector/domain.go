@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/caarlos0/domain_exporter/internal/client"
+	"github.com/pasientskyhosting/domain_exporter/internal/client"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/common/log"
 )
