@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.15
 EXPOSE 9222
 ENTRYPOINT ["/usr/local/bin/domain_exporter"]
 COPY domain_exporter_*.apk /tmp/
